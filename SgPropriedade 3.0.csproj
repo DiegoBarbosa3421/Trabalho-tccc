@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props" Condition="Exists('packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6B242B3-4BC7-4784-94A5-2DD3C504286A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SgPropriedade_3._0</RootNamespace>
+    <AssemblyName>SgPropriedade 3.0</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.Edm, Version=7.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.OData.Edm.7.15.0\lib\net45\Microsoft.OData.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.5.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.4.7.2\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.4.6.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form_Cd_Colaborador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Cd_Colaborador.Designer.cs">
+      <DependentUpon>Form_Cd_Colaborador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Cd_insumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Cd_insumos.Designer.cs">
+      <DependentUpon>Form_Cd_insumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Cd_Manutenção_Ferramentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Cd_Manutenção_Ferramentas.Designer.cs">
+      <DependentUpon>Form_Cd_Manutenção_Ferramentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Cd_Faturamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Cd_Faturamento.Designer.cs">
+      <DependentUpon>Form_Cd_Faturamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Cd_Propriedade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Cd_Propriedade.Designer.cs">
+      <DependentUpon>Form_Cd_Propriedade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Cd_Proprietario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Cd_Proprietario.Designer.cs">
+      <DependentUpon>Form_Cd_Proprietario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Cd_Serviços.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Cd_Serviços.Designer.cs">
+      <DependentUpon>Form_Cd_Serviços.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Cd_ServiçosExecutados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Cd_ServiçosExecutados.Designer.cs">
+      <DependentUpon>Form_Cd_ServiçosExecutados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Cd_Talhão.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Cd_Talhão.Designer.cs">
+      <DependentUpon>Form_Cd_Talhão.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Cd_Ferramentas_e_equipamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Cd_Ferramentas_e_equipamentos.Designer.cs">
+      <DependentUpon>Form_Cd_Ferramentas_e_equipamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Logim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Logim.Designer.cs">
+      <DependentUpon>Form_Logim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Principal.Designer.cs">
+      <DependentUpon>Form_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Cd_Produção.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Cd_Produção.Designer.cs">
+      <DependentUpon>Form_Cd_Produção.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Relatórios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Relatórios.Designer.cs">
+      <DependentUpon>Form_Relatórios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="util.cs" />
+    <EmbeddedResource Include="Form_Cd_Colaborador.resx">
+      <DependentUpon>Form_Cd_Colaborador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Cd_insumos.resx">
+      <DependentUpon>Form_Cd_insumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Cd_Manutenção_Ferramentas.resx">
+      <DependentUpon>Form_Cd_Manutenção_Ferramentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Cd_Faturamento.resx">
+      <DependentUpon>Form_Cd_Faturamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Cd_Propriedade.resx">
+      <DependentUpon>Form_Cd_Propriedade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Cd_Proprietario.resx">
+      <DependentUpon>Form_Cd_Proprietario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Cd_Serviços.resx">
+      <DependentUpon>Form_Cd_Serviços.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Cd_ServiçosExecutados.resx">
+      <DependentUpon>Form_Cd_ServiçosExecutados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Cd_Talhão.resx">
+      <DependentUpon>Form_Cd_Talhão.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Cd_Ferramentas_e_equipamentos.resx">
+      <DependentUpon>Form_Cd_Ferramentas_e_equipamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Logim.resx">
+      <DependentUpon>Form_Logim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Principal.resx">
+      <DependentUpon>Form_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Cd_Produção.resx">
+      <DependentUpon>Form_Cd_Produção.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Relatórios.resx">
+      <DependentUpon>Form_Relatórios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Relatorio_Completo.rdlc" />
+    <EmbeddedResource Include="Relatorio_Produção.rdlc" />
+    <EmbeddedResource Include="Relatório_Serviçosrdlc.rdlc" />
+    <EmbeddedResource Include="Relatório_Faturamento.rdlc" />
+    <EmbeddedResource Include="Relatorio_Insumos.rdlc" />
+    <EmbeddedResource Include="Relatorio_de_Ferramentas_e_Manutenção.rdlc" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\RegrasNegocio.lista_Ferramentas1.datasource" />
+    <None Include="Properties\DataSources\RegrasNegocio.Object_Faturamento.datasource" />
+    <None Include="Properties\DataSources\RegrasNegocio.Object_Insumos1.datasource" />
+    <None Include="Properties\DataSources\RegrasNegocio.Object_Produção1.datasource" />
+    <None Include="Properties\DataSources\RegrasNegocio.Object_serviços1.datasource" />
+    <None Include="Properties\DataSources\RegrasNegocio.RG_Proprietario1.datasource" />
+    <None Include="Properties\DataSources\RegrasNegocio.RN_Atividades1.datasource" />
+    <None Include="Properties\DataSources\RegrasNegocio.RN_Colaborador1.datasource" />
+    <None Include="Properties\DataSources\RegrasNegocio.RN_Faturamento.datasource" />
+    <None Include="Properties\DataSources\RegrasNegocio.RN_Ferramentas1.datasource" />
+    <None Include="Properties\DataSources\RegrasNegocio.RN_Insumos1.datasource" />
+    <None Include="Properties\DataSources\RegrasNegocio.RN_Manutenções1.datasource" />
+    <None Include="Properties\DataSources\RegrasNegocio.RN_Produção1.datasource" />
+    <None Include="Properties\DataSources\RegrasNegocio.RN_Propriedade1.datasource" />
+    <None Include="Properties\DataSources\RegrasNegocio.RN_Relatorios.datasource" />
+    <None Include="Properties\DataSources\RegrasNegocio.RN_Serviços.datasource" />
+    <None Include="Properties\DataSources\RegrasNegocio.RN_Talhão.datasource" />
+    <None Include="Properties\DataSources\RegrasNegocio.Util1.datasource" />
+    <None Include="Properties\DataSources\SGPropriedade3.Form_cadColaborador.datasource" />
+    <None Include="Properties\DataSources\SGPropriedade3.Form_cadInsumos.datasource" />
+    <None Include="Properties\DataSources\SGPropriedade3.Form_Cd_Propriedade.datasource" />
+    <None Include="Properties\DataSources\SGPropriedade3.Form_Cd_Serviços.datasource" />
+    <None Include="Properties\DataSources\SGPropriedade3.Form_Cd_ServiçosExecutados.datasource" />
+    <None Include="Properties\DataSources\SGPropriedade3.Form_Cd_Talhão.datasource" />
+    <None Include="Properties\DataSources\SGPropriedade3.Form_Ferramentas_e_equipamentos.datasource" />
+    <None Include="Properties\DataSources\SGPropriedade3.Form_Logim.datasource" />
+    <None Include="Properties\DataSources\SGPropriedade3.Form_Principal.datasource" />
+    <None Include="Properties\DataSources\SGPropriedade3.Program.datasource" />
+    <None Include="Properties\DataSources\SGPropriedade3.util.datasource" />
+    <None Include="Properties\DataSources\SgPropriedade_3._0.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\SgPropriedade_3._0.Properties.Settings.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Regras_Negocio 3.0\Regras_Negocio 3.0.csproj">
+      <Project>{8ab7790a-a0ed-456c-a00c-f0d12dd2e89e}</Project>
+      <Name>Regras_Negocio 3.0</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao-fechar %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\do-utilizador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nascer-do-sol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fertilizante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ferramentas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\servico-de-gestao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caneta %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excluir %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aumentar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\financiamento-colaborativo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar-documento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caneta-esferografica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baixar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grafico-de-crescimento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tendencia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tendencia1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Sgagricolatcc2.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props'))" />
+  </Target>
+</Project>
